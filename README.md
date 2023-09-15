@@ -1,3 +1,5 @@
+
+<html>
 <style>@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:100,200,300,regular,500,600,700,800,900);
 
 p {
@@ -8,12 +10,13 @@ p {
 </style>
 
 <br>
-
-#
-
+<br>
 <br>
 
 # <p style="color:rgb(255, 0, 208); text-align: center; font-size:25px">RandomFwoof</p>
+
+
+
 ## <p style="text-align: center"> A lightweight solution to random numbers.</p>
 <br>
 
@@ -30,3 +33,4 @@ This library was made to let developers get <span style="font-weight:bold">bette
 
 
 - We allow the developer to <span style="color:rgb(255, 0, 0)">not</span> focus on RNG, but the game itself. This RNG system will help to make "randomness" seem more fair. 
+</html>
