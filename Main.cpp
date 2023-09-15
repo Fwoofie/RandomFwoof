@@ -1,6 +1,6 @@
 #include <iostream>
 #include <synchapi.h>
-#include "RandomFwoof/include/RandomFwoof.h"
+#include "LibrarySource/include/RandomFwoof.h"
 
 int main() {
     int randomNumber = RandomFwoof::generateRandomNumber();
