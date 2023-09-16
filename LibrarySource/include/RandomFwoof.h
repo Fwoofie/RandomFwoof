@@ -3,5 +3,6 @@
 
 namespace RandomFwoof { 
     int generateRandomNumber(); 
+    int setRandomNumberSeed();
 };
 #endif 
