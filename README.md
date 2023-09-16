@@ -36,4 +36,4 @@ This library was designed to let developers get improved randomized numbers in C
 <br>
 <br>
 
-**Pssst. The folder for the compiled library is the RandomFwoof Folder** 
+**Pssst. The folder for the compiled library is the RandomFwoof Folder. Include it in your project** 
