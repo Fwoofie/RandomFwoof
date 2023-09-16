@@ -1,17 +1,25 @@
 <br>
 
+This library is made to help make **better** psuedo-randomized numbers in C++.
 # **RandomFwoof**
 
+`RandomFwoof` will give you a way to have better psuedo-randomized numbers than `srand()` ever can! 
+#
+### We achieve this by giving each person a lot of customizability when generating numbers, ***and it's easy to use!*** 🎉
+#
 ## **Better psuedo-random Number Library for C++.**
 <br>
 
 This library was designed to let developers get improved randomized numbers in C++. 
 
+### Features include:
+- Has the ability to set RNG seeds multiple times.
 <br>
+
+- Has the ability to set Application Specific Seeds too!
 
 `RandomFwoof` will give you a way to have **better** psuedo-randomized numbers than `srand()` and `rand()` can ever generate! 
 
-<br>
 
 - RandomFwoof achieves this by giving the developer a lot of customizability when generating numbers, ***and it's easy to use!*** 🎉
 
