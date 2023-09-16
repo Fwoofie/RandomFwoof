@@ -3,11 +3,18 @@
 #include <chrono>
 
 namespace RandomFwoof {
+    int setRandomNumberSeed(int &tick) {
+        if (tick) {
+            
+        }
+    }
     int generateRandomNumber() {
         auto startTime = std::chrono::high_resolution_clock::now();
         long tick = time(NULL);
           //srand(tick);
-           int randomNumber = tick //(rand());
+            int randomNumber = tick //(rand());
+
+
 
             auto endTime = std::chrono::high_resolution_clock::now();
             auto duration = std::chrono::duration_cast<std::chrono::microseconds>(endTime-startTime);
