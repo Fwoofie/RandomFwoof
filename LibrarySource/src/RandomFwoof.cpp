@@ -5,7 +5,9 @@
 namespace RandomFwoof {
     int setRandomNumberSeed(int &tick) {
         if (tick) {
-            
+            std::cout << "Tick was defined";
+        } else {
+            std::cout << "Tick was not defined";
         }
     }
     int generateRandomNumber() {
