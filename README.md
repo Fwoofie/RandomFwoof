@@ -18,7 +18,7 @@ This library was designed to let developers get improved randomized numbers in C
 
 - Has the ability to set Application Specific Seeds too!
 
-`RandomFwoof` will give you a way to have **better** psuedo-randomized numbers than `srand()` and `rand()` can ever generate! 
+`RandomFwoof` will give you a way to have **better (and faster)** psuedo-randomized numbers than `srand()` and `rand()` can ever generate! 
 
 
 - RandomFwoof achieves this by giving the developer a lot of customizability when generating numbers, ***and it's easy to use!*** 🎉
