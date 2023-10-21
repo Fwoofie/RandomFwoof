@@ -1,10 +1,13 @@
 #include <iostream>
-#include <synchapi.h>
-#include "LibrarySource/include/RandomFwoof.h"
+#include <chrono>
+#include <thread>
+#include "RandomFwoof/Include/RandomFwoof.h"
 
-int main() {
-    RandomFwoof::se
-    int randomNumber = RandomFwoof::generateRandomNumber();
-    std::cout << randomNumber;
-    return 0;
+int main()
+{
+      RandomFwoof::setRandomNumberSeed(time(NULL), 0);
+      std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+      std::cout << RandomFwoof::getFlag("rerollrandomseed") << std::endl;
+      std::cout << RandomFwoof::generateRandomNumber() << std::endl;
+      return 0;
 }
