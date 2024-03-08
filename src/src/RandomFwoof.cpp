@@ -7,6 +7,7 @@ std::string randomNumberSeed = "0";
 std::unordered_map<std::string, bool> flags = {
     {"rerollrandomseed", true}
 };
+
 int currentRandomIndex = 0;
 int savedApplicationRandomSeed = 0;
 
@@ -14,20 +15,18 @@ namespace RandomFwoof {
     
     int powerOf(int originalBase, int exponent) 
     {
-            int base = originalBase;
+        int base = originalBase;
 
-            for (int i = 1; i < exponent; i++) 
-            {
+        for (int i = 1; i < exponent; i++) 
+        {
             base = base * originalBase;
-            }
+        }
         return base;
     }
 
     void setFlag(std::string flag, bool value)
     {
-        if (flags[flag]) {
-            flags[flag] = value;
-        }
+        flags[flag] = value;
     }
 
     bool getFlag(std::string flag)
@@ -60,9 +59,11 @@ namespace RandomFwoof {
         std::string stringTick = std::to_string(tick); //intToArray(tick, *randomNumberArray);
         std::string finishedNumber;
 
-        if (ARS == 0) {
+        if (ARS == 0) 
+        {
             ARS = time(NULL) * 0.0000004;
         }
+        
         savedApplicationRandomSeed = ARS;
 
         for (int i = 0; i < stringTick.length(); i++) {
@@ -73,13 +74,17 @@ namespace RandomFwoof {
             {
                 previousIndex = stringTick.length() - 1;
                 secondPreviousIndex = previousIndex - 2;
-            } else {
+            }
+            else 
+            {
                 previousIndex = i - 1;
 
                 if (previousIndex == 0)
                 {
                     secondPreviousIndex = stringTick.length() - 1;
-                } else {
+                }
+                else 
+                {
                     secondPreviousIndex = previousIndex - 1;
                 }
             }
@@ -89,7 +94,7 @@ namespace RandomFwoof {
             currentChar = currentChar * secondPreviousIndex * previousIndex * ARS;
             currentChar = abs(currentChar);
 
-            finishedNumber.append(std::to_string(abs(currentChar * tick)));
+            finishedNumber.append(std::to_string(currentChar * tick));
 
         }
 
@@ -104,7 +109,8 @@ namespace RandomFwoof {
             currentRandomIndex++;
             return randomNumberSeed[currentRandomIndex-1] - 48;
         } else {
-            if (flags["rerollrandomseed"]) {
+            if (flags["rerollrandomseed"]) 
+        {
                 setRandomNumberSeed(time(NULL), savedApplicationRandomSeed);
             }
 
