@@ -31,7 +31,7 @@ namespace RandomFwoof {
 
     bool getFlag(std::string flag)
     {
-        if (flags[flag]) {
+        if (flags.find(flag) != flags.end()) {
             return flags[flag];
         }
 
@@ -40,7 +40,7 @@ namespace RandomFwoof {
 
     void clearRandomSeed()
     {
-        randomNumberSeed = "0";
+        randomNumberSeed = "012";
     }
 
     std::string getRandomSeed()
@@ -91,8 +91,7 @@ namespace RandomFwoof {
 
             int currentChar = stringTick[i];
             currentChar = powerOf(currentChar, stringTick[previousIndex]);
-            currentChar = currentChar * secondPreviousIndex * previousIndex * ARS;
-            currentChar = abs(currentChar);
+            currentChar = (unsigned int) currentChar * secondPreviousIndex * previousIndex * ARS;
 
             finishedNumber.append(std::to_string(currentChar * tick));
 

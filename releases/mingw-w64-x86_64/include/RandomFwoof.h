@@ -3,7 +3,7 @@
 #include <string>
 
 namespace RandomFwoof { 
-int generateRandomNumber();
+    int generateRandomNumber();
     int generateRandomNumberRange(int min, int max);
     void setRandomNumberSeed(int tick, int ARS);
     void clearRandomSeed();
