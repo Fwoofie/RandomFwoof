@@ -8,7 +8,7 @@ std::unordered_map<std::string, bool> flags = {
     {"rerollrandomseed", true}
 };
 
-int currentRandomIndex = 0;
+int currentRandomIndex = 1;
 int savedApplicationRandomSeed = 0;
 
 namespace RandomFwoof {
@@ -114,10 +114,32 @@ namespace RandomFwoof {
                 setRandomNumberSeed(time(NULL), savedApplicationRandomSeed);
             }
 
-            currentRandomIndex = 1;
-            return randomNumberSeed[0] - 48;
+            currentRandomIndex = 2;
+            return randomNumberSeed[1] - 48;
         }
         
+    }
+
+    int generateRandomNumberRange(int min, int max)
+    {
+        int range = max - min;
+
+        int randomNumber = 0;
+
+        int maxRolls = range * 10;
+        int currentRolls = 0;
+        for (int i = 0; i < range; i++)
+        {
+            currentRolls += generateRandomNumber();
+            if (generateRandomNumber() > 4)
+            {
+                currentRolls += 1;   
+            }
+        }
+        
+        randomNumber = (currentRolls * 0.1);
+
+        return randomNumber + min;
     }
 
 }
